@@ -9,13 +9,14 @@ cmake ../zenoh-pico \
       -DCMAKE_INSTALL_PREFIX=../zenoh-pico-install \
       -DCMAKE_BUILD_TYPE=Release \
       -DZ_FEATURE_UNSTABLE_API=1 \
-      -DZ_FEATURE_ADVANCED_PUBLICATION=1
+      -DZ_FEATURE_ADVANCED_PUBLICATION=1 \
+      -DZ_FEATURE_ADVANCED_SUBSCRIPTION=1
 make
 make install
 cd ..
 ```
 
-`Z_FEATURE_ADVANCED_PUBLICATION` needs `Z_FEATURE_UNSTABLE_API=1`. The other required features for this example are already enabled by default in `zenoh-pico`.
+`Z_FEATURE_ADVANCED_PUBLICATION` and `Z_FEATURE_ADVANCED_SUBSCRIPTION` need `Z_FEATURE_UNSTABLE_API=1`.
 
 * Build the example
 
@@ -43,14 +44,15 @@ cd ..
 
 This builds:
 
-* `zp_simple_pub`
-* `zp_simple_advanced_pub`
+* `zp_simple_pubsub`
+* `zp_simple_advanced_pubsub`
 
 * Run the examples
 
 ```bash
-./build/zp_simple_pub
-./build/zp_simple_advanced_pub
+# Remember to run zenohd first
+./build/zp_simple_pubsub
+./build/zp_simple_advanced_pubsub
 ```
 
 * Clean the environment
