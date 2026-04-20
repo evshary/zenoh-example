@@ -1,0 +1,7 @@
+build
+
+zenoh-pico-build
+zenoh-pico-install
+
+# AI related files
+.codex

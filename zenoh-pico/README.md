@@ -36,7 +36,7 @@ If your environment still does not resolve `zenohpico` through `CMAKE_PREFIX_PAT
 mkdir -p build
 cd build
 cmake .. \
-      -DCMAKE_PREFIX_PATH="$(pwd)/../zenoh-pico-install/lib/cmake/zenohpico" \
+      -DCMAKE_PREFIX_PATH="$(pwd)/../zenoh-pico-install" \
       -DCMAKE_BUILD_TYPE=Release
 make
 cd ..
